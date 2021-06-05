@@ -2,8 +2,9 @@ const socket = io('/')
 const video_sender = document.querySelector('.video-container-sender')
 // const video_reciever= document.querySelector('.video-container-receiver')
 
-const myPeer = new Peer( {
-  host: `interview-sanyam.herokuapp.com`,
+const myPeer = new Peer(undefined, {
+  host: '/',
+  secure: true,
   port: 443
 })
 const myVideo = document.createElement('video')
