@@ -4,6 +4,7 @@ const video_sender = document.querySelector('.video-container-sender')
 
 const myPeer = new Peer(undefined,{
   host: 'interview-sanyam.herokuapp.com',
+  path:'/',
   secure: true,
   port: 443,
   key: 'peerjs',
