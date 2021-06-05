@@ -1,10 +1,7 @@
 const socket = io('/')
 const video_sender = document.querySelector('.video-container-sender')
 // const video_reciever= document.querySelector('.video-container-receiver')
-const myPeer = new Peer(undefined, {
-  host: `/`,
-  port: '9000'
-})
+const myPeer = new Peer()
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
