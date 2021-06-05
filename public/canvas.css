@@ -1,0 +1,82 @@
+
+.color1{
+margin-bottom: 10px;
+
+}
+.tools {
+    height: 7vh;
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+}
+.parent{
+border: 3px solid;
+height: 2rem;
+width: 15rem;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.color{
+height: 70%;
+width: 10%;
+background: red;
+}
+.black{
+background-color: white;
+border: solid black 3px;
+
+}
+.red{
+background-color: red;
+}
+.blue{
+background-color: blue;
+}
+.green{
+background-color: green;
+}
+.yellow{
+background-color: yellow;
+}
+.board{
+    height: 91vh;
+    width: 40vw;
+    position:relative;
+}
+.eraser{
+
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+
+    size: 7rem;
+}
+.newpage{
+
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.downpdf{
+
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.base{
+    display: flex;
+}
+.head{
+    display: flex;
+}

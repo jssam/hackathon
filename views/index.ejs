@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./CodeMirror/codemirror.css">
+  <link rel="stylesheet" href="./CodeMirror/3024-night.css">
+  <link rel="stylesheet" href="./CodeMirror/abbott.css">
+  <link rel="stylesheet" href="./CodeMirror/cobalt.css">
+  <link rel="stylesheet" href="./CodeMirror/eclipse.css">
+  <link rel="stylesheet" href="./CodeMirror/midnight.css">
+  <link rel="stylesheet" href="./CodeMirror/twilight.css">
+  <link rel="stylesheet" href="./CodeMirror/xq-dark.css">
+  <link rel="stylesheet" href="./CodeMirror/xq-light.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="canvas.css">
+  <script>
+    const ROOM_ID = "<%= roomId %>";
+    // const socket = io();
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- headeerr -->
+  <div class="head">
+    <div class="themeselect">
+      <h1>InterView App</h1>
+      Select a theme: <select onchange="selectTheme()" id="select">
+        <option selected="">default</option>
+        <option>3024-night</option>
+        <option>abbott</option>
+        <option>cobalt</option>
+        <option>eclipse</option>
+        <option>midnight</option>
+        <option>twilight</option>
+        <option>xq-dark</option>
+        <option>xq-light</option>
+      </select>
+    </div>
+
+    <div class="tools">
+      <div class="parent">
+        <div class="color black"></div>
+        <div class="color red"></div>
+        <div class="color green"></div>
+        <div class="color blue"></div>
+        <div class="color yellow"></div>
+      </div>
+      <div class="eraser">
+        <i class="fas fa-eraser fa-2x icon"></i>
+      </div>
+  
+      <div class="newpage">
+        <i class="fas fa-plus-square fa-2x icon"></i>
+      </div>
+  
+    </div>
+  </div>
+
+  <!-- header se neche vala base -->
+  <div class="base">
+
+    <!-- editor -->
+    <div class="set">
+    <form class="data"><textarea id="code" name="code" style="display: none;">////write your code here
+      ////play well
+  </textarea></form>
+</div>
+
+
+    <!-- canvas hai apna -->
+    <canvas id="board"></canvas>
+
+
+
+    <!-- right most part -->
+    <div class="right-container">
+      <div class="video-container-sender">
+     
+    
+ 
+      </div>
+
+
+
+      <div class="chat">
+         <div class="chat-header">Chat   Area</div>
+         <div class="chat-area">
+         </div>
+         <input id="chat-input" placeholder="Wanna! say something"></input>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./CodeMirror/codemirror.js" defer></script>
+  <script src="./CodeMirror/javascript.js" defer></script>
+  <script src="./CodeMirror/active-line.js" defer></script>
+  <script src="./CodeMirror/matchbrackets.js" defer></script>
+  <script src="./canvas.js" defer></script>
+  <script src="./editor.js" defer></script>
+
+</body>
+
+</html>
