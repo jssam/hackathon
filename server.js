@@ -6,9 +6,10 @@ const { v4: uuidV4 } = require('uuid')
 const { ExpressPeerServer } = require('peer');
 
 
- server.listen(process.env.PORT || 3000)
+const applisten = server.listen(process.env.PORT || 3000)
 const peerServer = ExpressPeerServer(applisten, {
-  path: 'interview-sanyam.herokuapp.com'
+  host: 'http://interview-sanyam.herokuapp.com',
+  path: '/'
 });
 app.use('/peerjs', peerServer);
 
