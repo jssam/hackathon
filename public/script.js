@@ -1,9 +1,9 @@
-const socket = io('interview-sanyam.herokuapp.com')
+const socket = io('/')
 const video_sender = document.querySelector('.video-container-sender')
 // const video_reciever= document.querySelector('.video-container-receiver')
 
 const myPeer = new Peer(undefined, {
-  host: 'interview-sanyam.herokuapp.com',
+  host: 'chitchatfriends1.herokuapp.com',
   secure: true,
   port: 443
 })
