@@ -3,8 +3,8 @@ const video_sender = document.querySelector('.video-container-sender')
 // const video_reciever= document.querySelector('.video-container-receiver')
 
 const myPeer = new Peer(undefined,{
-  host: 'https://servertryapp.herokuapp.com',
-  path:'/',
+  host: 'servertryapp.herokuapp.com',
+  
   secure: true,
   port: 443,
   key: 'peerjs',
