@@ -1,16 +1,16 @@
 const socket = io('/')
 const video_sender = document.querySelector('.video-container-sender')
 // const video_reciever= document.querySelector('.video-container-receiver')
-var peerid;
+
 const myPeer = new Peer({
   host: 'interview-sanyam.herokuapp.com',
   secure: true,
-  port: 443
+  port: 9000,
+  key: 'peerjs',
+   debug: 3
+
 })
-myPeer.on('open', id => {
-  peerid= id;
-  console.log(peerid);
-})
+
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
@@ -30,8 +30,8 @@ navigator.mediaDevices.getUserMedia({
   })
 
   socket.on('user-connected', userId => {
-    setTimeout(connectToNewUser,1000, peerid,stream)
-    connectToNewUser( peerid, stream)
+    setTimeout(connectToNewUser,1000,userId,stream)
+    connectToNewUser(userId, stream)
   })
 })
 
