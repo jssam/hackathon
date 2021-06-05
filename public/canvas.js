@@ -89,7 +89,7 @@ function getCoordinates(initialY) {
 function getCoordinates_x(initialx) {
     let obj = body.getBoundingClientRect();
     let s= initialx - (obj.width)*2/5;
-    console.log(s);
+    // console.log(s);
 return s;
 }
 
